@@ -1,0 +1,51 @@
+@use "../abstracts/" as a;
+
+
+footer {
+    background-color: a.$black;
+    color: a.$white;
+}
+
+.footer {
+    width: min(100% - 10%, 1000px);
+    margin-inline: auto;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 4rem 0;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        &-link {
+            color: a.$white;
+            font-family: a.$font-primary;
+        }
+    }
+
+    &__social-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-block-start: 1.5rem;
+        gap: 1rem;
+    }
+
+    &__social-link {
+        display: flex;
+        gap: .8rem;
+    }
+
+    &__copyright {
+        font-family: a.$font-secondary;
+        color: a.$dark-gray;
+    }
+
+}

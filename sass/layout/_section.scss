@@ -1,0 +1,83 @@
+@use "../abstracts/" as a;
+
+.features {
+    width: min(100% - 10%, 1000px);
+    margin-inline: auto;
+    margin-block-start: 5em;
+    margin-block-end: 5em;
+
+    h2 {
+        font-family: a.$font-primary;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 300;
+        font-size: 30px;
+        margin: 1.2em 0; 
+    }
+
+    p {
+       font-family: a.$font-secondary;
+       color: a.$very-dark-gray;
+       text-align: center;
+    }
+}
+
+.creations {
+    width: min(100% - 10%, 1000px);
+    margin-inline: auto;
+    margin-block-end: 6rem;
+
+    &__text {
+        margin-block-end: 2em;
+    }
+
+
+    &__title {
+        font-family: a.$font-primary;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 300;
+    }
+
+    &__btn {
+        font-family: a.$font-primary;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: .6rem 0;
+        color: a.$black;
+        width: 50%;
+        margin-inline: auto;
+        font-size: 13px;
+        border: 2px solid a.$black;
+
+        &--top {
+            display: none;
+        }
+    }
+
+    &__list {
+        position: relative;
+        margin-block-end: .8rem;
+
+        &-img--desktop {
+            display: none;
+        }
+
+        &-title {
+            display: flex;
+            flex-direction: column;
+            font-family: a.$font-primary;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 24px;
+            color: a.$white;
+            position: absolute;
+            bottom: 1rem;
+            left: .8rem;
+        }
+    }
+}

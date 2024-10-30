@@ -1,0 +1,25 @@
+*,
+ *::before,
+ *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+ }
+
+ html {
+    font-size: 15px;
+ }
+
+ body {
+    min-height: 100dvh;
+ }
+ 
+
+ img {
+    max-inline-size: 100%;
+ }
+
+ a {
+   text-decoration: none;
+ }
+

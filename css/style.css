@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+img {
+  max-inline-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-image: url(../../images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero {
+  width: min(90%, 1000px);
+  margin-inline: auto;
+  padding-block-start: 1.2rem;
+  padding-block-end: 10rem;
+}
+.hero__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 8rem;
+}
+.hero .hero__img {
+  z-index: 1000;
+}
+.hero input {
+  display: none;
+}
+.hero label {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  z-index: 1000;
+}
+.hero label img:nth-child(2) {
+  display: none;
+}
+.hero nav {
+  background-color: hsl(0, 0%, 0%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-block-start: 7rem;
+  padding-inline-start: 1rem;
+  display: none;
+  flex-direction: column;
+}
+.hero nav a {
+  color: hsl(0, 0%, 100%);
+  display: block;
+  margin-block-end: 1em;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.hero__title {
+  border: 1px solid hsl(0, 0%, 100%);
+  padding: 1em;
+}
+.hero__title h1 {
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 37px;
+  font-family: "Josefin Sans", sans-serif;
+}
+@media (max-width: 600px) {
+  .hero input:checked + label + nav {
+    display: flex;
+  }
+  .hero input:checked + label img:nth-child(2) {
+    display: block;
+  }
+  .hero input:checked + label img:nth-child(1) {
+    display: none;
+  }
+}
+
+.features {
+  width: min(90%, 1000px);
+  margin-inline: auto;
+  margin-block-start: 5em;
+  margin-block-end: 5em;
+}
+.features h2 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
+  margin: 1.2em 0;
+}
+.features p {
+  font-family: "Alata", sans-serif;
+  color: hsl(0, 0%, 41%);
+  text-align: center;
+}
+
+.creations {
+  width: min(90%, 1000px);
+  margin-inline: auto;
+  margin-block-end: 6rem;
+}
+.creations__text {
+  margin-block-end: 2em;
+}
+.creations__title {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+}
+.creations__btn {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 0;
+  color: hsl(0, 0%, 0%);
+  width: 50%;
+  margin-inline: auto;
+  font-size: 13px;
+  border: 2px solid hsl(0, 0%, 0%);
+}
+.creations__btn--top {
+  display: none;
+}
+.creations__list {
+  position: relative;
+  margin-block-end: 0.8rem;
+}
+.creations__list-img--desktop {
+  display: none;
+}
+.creations__list-title {
+  display: flex;
+  flex-direction: column;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 24px;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  bottom: 1rem;
+  left: 0.8rem;
+}
+
+footer {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+}
+
+.footer {
+  width: min(90%, 1000px);
+  margin-inline: auto;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 0;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.footer__nav-link {
+  color: hsl(0, 0%, 100%);
+  font-family: "Josefin Sans", sans-serif;
+}
+.footer__social-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-start: 1.5rem;
+  gap: 1rem;
+}
+.footer__social-link {
+  display: flex;
+  gap: 0.8rem;
+}
+.footer__copyright {
+  font-family: "Alata", sans-serif;
+  color: hsl(0, 0%, 55%);
+}/*# sourceMappingURL=style.css.map */
