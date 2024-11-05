@@ -1,0 +1,40 @@
+@use "../abstracts/" as a;
+
+.hero__navbar-link:hover,
+.hero__navbar-link:focus,
+.footer__nav-link:hover,
+.footer__nav-link:focus,
+.social-links:hover,
+.social-links:focus {
+    color: hsl(0, 0%, 100%, 0.8);
+}
+
+.hero__navbar-link:active,
+.footer__nav-link:active,
+.social-links:active {
+    box-shadow: 0 2px 0 0 a.$white;
+}
+
+.creations__btn:active {
+    background-color: a.$black;
+    color: a.$white;
+}
+
+.creations__list:hover,
+.creations__list:focus,
+.creations__list-img:hover,
+.creations__list-img:focus {
+    transform: scale(1.03);
+}
+
+.creations__list:active::after {
+    opacity: .5;
+}
+
+.creations__list:active {
+    color: a.$black;
+}
+
+
+
+

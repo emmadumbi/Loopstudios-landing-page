@@ -6,11 +6,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -22,7 +23,7 @@
 </head>
 
 <body>
-  <header> <!--add bg-img-->
+  <header>
     <section class="hero">
       <div class="hero__content">
 
@@ -30,7 +31,7 @@
           <img src="./images/logo.svg" alt="logo">
         </div>
 
-        <input type="checkbox" id="nav--toggle" class="nav--toggle">
+        <input type="checkbox" id="nav--toggle">
         <label for="nav--toggle">
 
           <img src="./images/icon-hamburger.svg" alt="">
@@ -40,22 +41,22 @@
         </label>
   
         <nav class="hero__navbar">
-          <a href="#">About</a>
+          <a class="hero__navbar-link" href="#">About</a>
 
-          <a href="#">Careers</a>
+          <a class="hero__navbar-link" href="#">Careers</a>
 
-          <a href="#">Events</a>
+          <a class="hero__navbar-link" href="#">Events</a>
 
-          <a href="#">Products</a>
+          <a class="hero__navbar-link" href="#">Products</a>
 
-          <a href="#">Support</a>
+          <a class="hero__navbar-link" href="#">Support</a>
   
         </nav>
 
       </div>
 
-      <div class="hero__title">
-        <h1>
+      <div class="hero__title-wraper">
+        <h1 class="hero__title">
           Immersive experiences that deliver
         </h1>
       </div>
@@ -65,17 +66,16 @@
 
   <main>
     <section class="features">
-      <div class="features__img">
-         <!--add bg-img-->
-         <img src="./images/mobile/image-interactive.jpg" alt="">
+      <div class="features__img">  
+        <img src="./images/mobile/image-interactive.jpg" alt="">
       </div>
 
       <div class="features__details">
-        <h2>
+        <h2 class="features__title">
           The leader in interactive VR
         </h2>
 
-        <p>
+        <p class="features__desc">
           Founded in 2011, Loopstudios has been producing world-class virtual reality 
           projects for some of the best companies around the globe. Our award-winning 
           creations have transformed businesses through digital experiences that bind 
@@ -99,7 +99,7 @@
       </div>
 
       <div class="creations__grid">
-        <div class="creations__list">
+        <a href="#" class="creations__list">
           <img class="creations__list-img creations__list-img--mobile" src="./images/mobile/image-deep-earth.jpg" alt="">
           
           <img class="creations__list-img creations__list-img--desktop" src="./images/desktop/image-deep-earth.jpg" alt="">
@@ -109,9 +109,9 @@
             <span>earth</span>
           </h4>
 
-        </div>
+        </a>
 
-        <div class="creations__list">
+        <a href="#" class="creations__list">
           <img class="creations__list-img creations__list-img--mobile" src="./images/mobile/image-night-arcade.jpg" alt="">
 
           <img class="creations__list-img creations__list-img--desktop" src="./images/desktop/image-night-arcade.jpg" alt="">
@@ -121,9 +121,9 @@
             <span>arcade</span>
           </h4>
 
-        </div>
+        </a>
 
-        <div class="creations__list">
+        <a href="#" class="creations__list">
           <img class="creations__list-img creations__list-img--mobile" src="./images/mobile/image-soccer-team.jpg" alt="">
 
           <img class="creations__list-img creations__list-img--desktop" src="./images/desktop/image-soccer-team.jpg" alt=""> 
@@ -133,9 +133,9 @@
             <span>team VR</span>
           </h4>
 
-        </div>
+        </a>
 
-        <div class="creations__list">
+        <a href="#" class="creations__list">
           <img class="creations__list-img creations__list-img--mobile" src="./images/mobile/image-grid.jpg"  alt="">
 
           <img class="creations__list-img creations__list-img--desktop" src="./images/desktop/image-grid.jpg"  alt="">
@@ -145,9 +145,9 @@
            <span>grid</span>
           </h4>
 
-        </div>
+        </a>
 
-        <div class="creations__list">
+        <a href="#" class="creations__list">
           <img class="creations__list-img creations__list-img--mobile" src="./images/mobile/image-from-above.jpg" alt="">
 
           <img class="creations__list-img creations__list-img--desktop" src="./images/desktop/image-from-above.jpg"  alt="">
@@ -157,9 +157,9 @@
             <span>above VR</span>
           </h4>
 
-        </div>
+        </a>
 
-        <div class="creations__list">
+        <a href="#" class="creations__list">
           <img class="creations__list-img creations__list-img--mobile" src="./images/mobile/image-pocket-borealis.jpg" alt="">
 
           <img class="creations__list-img creations__list-img--desktop" src="./images/desktop/image-pocket-borealis.jpg" alt="">
@@ -169,9 +169,9 @@
             <span>borealis</span>
           </h4>
 
-        </div>
+        </a>
 
-        <div class="creations__list">
+        <a href="#" class="creations__list">
           <img class="creations__list-img creations__list-img--mobile" src="./images/mobile/image-curiosity.jpg" alt="">
 
           <img class="creations__list-img creations__list-img--desktop" src="./images/desktop/image-curiosity.jpg" alt="">
@@ -181,9 +181,9 @@
             <span>curiosity</span>
           </h4>
 
-        </div>
+        </a>
 
-        <div class="creations__list">
+        <a href="#" class="creations__list">
           <img class="creations__list-img creations__list-img--mobile" src="./images/mobile/image-fisheye.jpg" alt="">
 
           <img class="creations__list-img creations__list-img--desktop" src="./images/desktop/image-fisheye.jpg" alt="">
@@ -193,7 +193,7 @@
             <span>fisheye</span>
           </h4>
 
-        </div>
+        </a>
 
       </div>
 
@@ -205,50 +205,54 @@
   <footer>
     <section class="footer">
       <div class="footer__content">
-        <div class="footer__logo">
-          <img src="./images/logo.svg" alt="logo">
+
+        <div>
+          <div class="footer__logo">
+            <img src="./images/logo.svg" alt="logo">
+          </div>
+  
+          <nav class="footer__nav">
+            <a class="footer__nav-link" href="#">
+              About
+            </a>
+  
+            <a class="footer__nav-link" href="#">
+              Careers
+            </a>
+  
+            <a class="footer__nav-link" href="#">
+              Events
+            </a>
+  
+            <a class="footer__nav-link" href="#">
+              Products
+            </a>
+  
+            <a class="footer__nav-link" href="#">
+              Support
+            </a>
+  
+          </nav>
         </div>
-
-        <nav class="footer__nav">
-          <a class="footer__nav-link" href="#">
-            About
-          </a>
-
-          <a class="footer__nav-link" href="#">
-            Careers
-          </a>
-
-          <a class="footer__nav-link" href="#">
-            Events
-          </a>
-
-          <a class="footer__nav-link" href="#">
-            Products
-          </a>
-
-          <a class="footer__nav-link" href="#">
-            Support
-          </a>
-
-        </nav>
+        
 
         <div class="footer__social-content">
           <div class="footer__social-link">
-            <span class="social-links">
+            <a href="#" class="social-links">
               <img src="./images/icon-facebook.svg" alt=""><!--add alt text-->
-            </span>
+            </a>
             
-            <span class="social-links">
+            <a href="#" class="social-links">
               <img src="./images/icon-twitter.svg" alt=""><!--add alt text-->
-            </span>
+            </a>
 
-            <span class="social-links">
+            <a href="#" class="social-links">
               <img src="./images/icon-pinterest.svg" alt=""><!--add alt text-->
-            </span>
+            </a>
 
-            <span class="social-links">
+            <a href="#" class="social-links">
               <img src="./images/icon-instagram.svg" alt=""><!--add alt text-->
-            </span>
+            </a>
             
           </div>
 

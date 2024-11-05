@@ -7,8 +7,7 @@ footer {
 }
 
 .footer {
-    width: min(100% - 10%, 1000px);
-    margin-inline: auto;
+    @include a.width;
 
     &__content {
         display: flex;
@@ -16,6 +15,12 @@ footer {
         align-items: center;
         gap: 1rem;
         padding: 4rem 0;
+        @include a.min-widths(medium) {
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1.5rem 0;
+        }
     }
 
     &__nav {
@@ -23,10 +28,16 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        margin-block-start: 1rem;
+        @include a.min-widths(medium) {
+            flex-direction: row;
+            margin-block-start: .5rem;
+        }
 
         &-link {
             color: a.$white;
             font-family: a.$font-primary;
+            font-size: clamp(1rem, 0.943rem + 0.268vw, 1.2rem);
         }
     }
 
@@ -36,6 +47,10 @@ footer {
         align-items: center;
         margin-block-start: 1.5rem;
         gap: 1rem;
+        @media (min-width: 700px) {
+            margin: 0;
+            gap: 0;
+        }
     }
 
     &__social-link {
@@ -45,7 +60,9 @@ footer {
 
     &__copyright {
         font-family: a.$font-secondary;
+        font-size: clamp(1rem, 0.943rem + 0.268vw, 1.2rem);
         color: a.$dark-gray;
+        margin-block-start: .5rem;
     }
 
 }

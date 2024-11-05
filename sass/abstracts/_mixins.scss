@@ -1,0 +1,27 @@
+@mixin width {
+    width: min(100% - 10%, 1100px);
+    margin-inline: auto;
+}
+
+$min-widths: (
+    "small": 31.25em, //500px
+    "medium": 43.75em, //700px
+    "large": 55.6875em, //891px
+);
+
+@mixin min-widths($size) {
+    @media (min-width: map-get($min-widths, $size)) {
+        @content;
+    }
+};
+
+$max-widths: (
+    "small": 43.68875em, //699.02px
+);
+
+@mixin max-widths($size) {
+    @media (max-width: map-get($max-widths, $size)) {
+        @content;
+    }
+};
+

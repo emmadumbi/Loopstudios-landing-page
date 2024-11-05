@@ -6,11 +6,14 @@ header {
     background-position: center;
     background-size: cover;
     position: relative;
+
+    @include a.min-widths(medium) {
+        background-image: url(../../images/desktop/image-hero.jpg);
+    }
 }
 
 .hero {
-    width: min(100% - 10%, 1000px);
-    margin-inline: auto;
+    @include a.width;
     padding-block-start: 1.2rem;
     padding-block-end: 10rem;
     
@@ -20,35 +23,39 @@ header {
         align-items: center;
         justify-content: space-between;
         margin-block-end: 8rem;
+
+        @include a.min-widths(medium) {
+            align-items: flex-start;
+        }
         
     }
 
     .hero__img {
-        z-index: 1000;
+        z-index: 1;
     }
     
-    // img {
-    //     width: 7rem;  
-    // }
 
     input {
         display: none;
     }
 
    label {
-    // width: 18px;
     display: flex;
     cursor: pointer;
     align-items: center;
-    z-index: 1000;
+    z-index: 1;
 
      img:nth-child(2) {
         display: none;
     }
 
+    @include a.min-widths(medium) {
+        display: none;
+    }
+
    }
 
-   nav {
+   &__navbar {
     background-color: a.$black;
     position: absolute;
     top: 0;
@@ -59,35 +66,61 @@ header {
     padding-inline-start: 1rem;
     display: none;
     flex-direction: column;
-    a {
+    &-link {
         color: a.$white;
-        display: block;
         margin-block-end: 1em;
         font-family: a.$font-primary;
         font-weight: 300;
         text-transform: uppercase;
-        font-size: 18px;
+        font-size: clamp(1rem, 0.943rem + 0.268vw, 1.2rem);
+
+        @include a.min-widths(medium) {
+            font-weight: initial;
+            text-transform: capitalize;
+            margin-block-end: 0;
+        }
+    }
+
+    @include a.min-widths(medium) {
+        display: flex;
+        flex-direction: row;
+        gap: .8rem;
+        align-self: center;
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: inherit;
+        padding: 0;
     }
 
    }
 
-   &__title {
+   &__title-wraper {
     border: 1px solid a.$white;
     padding: 1em;
 
-    h1 {
-        color: a.$white;
-        text-transform: uppercase;
-        font-weight: 300;
-        font-size: 37px;
-        font-family: a.$font-primary;
-    
-       }
+    @include a.min-widths(small) {
+        width: 65%;
+        
+    }
+
+    @include a.min-widths(medium) {
+        width: 50%;
+    }
+   }
+
+   &__title {
+    color: a.$white;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: clamp(2.467rem, 2.124rem + 1.607vw, 3.667rem);
+    font-family: a.$font-primary;
+
    }
 
  
 
-   @media (max-width: 600px) {
+   @include a.max-widths(small) {
     input:checked + label + nav {
         display: flex;
     }

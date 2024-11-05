@@ -1,0 +1,14 @@
+@use "../abstracts/" as a;
+
+.creations__grid {
+    @include a.min-widths(medium) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    @include a.min-widths(large) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}

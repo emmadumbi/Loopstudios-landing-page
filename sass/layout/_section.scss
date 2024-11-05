@@ -1,34 +1,78 @@
 @use "../abstracts/" as a;
 
 .features {
-    width: min(100% - 10%, 1000px);
-    margin-inline: auto;
+    @include a.width;
     margin-block-start: 5em;
     margin-block-end: 5em;
 
-    h2 {
-        font-family: a.$font-primary;
-        text-transform: uppercase;
-        text-align: center;
-        font-weight: 300;
-        font-size: 30px;
-        margin: 1.2em 0; 
+    @include a.min-widths(medium) {
+    display: flex;
+    gap: 1.5rem;
+    }
+    
+
+    &__img {
+        flex: 1;
+        margin-block-end: .8em;
     }
 
-    p {
-       font-family: a.$font-secondary;
-       color: a.$very-dark-gray;
-       text-align: center;
+
+    &__details {
+        background-color: a.$white;
+        flex: 1;
+        text-align: center;
+
+        @include a.min-widths(medium) {
+            text-align: left;
+        }
+
+        @include a.min-widths(large) {
+            margin-top: 6rem;
+            margin-left: -8rem;
+            padding: 4rem 0 4rem 4rem;
+        }
+
+        
     }
+
+    &__title {
+        font-family: a.$font-primary;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: clamp(2rem, 1.905rem + 0.446vw, 2.333rem);
+        margin-inline: auto; 
+        max-width: 28rem;
+
+    
+        @include a.min-widths(medium) {
+            margin: 0;
+        }
+    }
+
+    &__desc {
+        font-family: a.$font-secondary;
+        color: a.$very-dark-gray;
+        margin-block-start: .8em;
+        font-size: clamp(1rem, 0.943rem + 0.268vw, 1.2rem);
+    }
+
+
+
+  
 }
 
 .creations {
-    width: min(100% - 10%, 1000px);
-    margin-inline: auto;
+    @include a.width;
     margin-block-end: 6rem;
 
     &__text {
         margin-block-end: 2em;
+        @include a.min-widths(medium) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
     }
 
 
@@ -36,7 +80,7 @@
         font-family: a.$font-primary;
         text-transform: uppercase;
         text-align: center;
-        font-size: 28px;
+        font-size: clamp(1.867rem, 1.829rem + 0.179vw, 2.1rem);
         font-weight: 300;
     }
 
@@ -51,20 +95,49 @@
         color: a.$black;
         width: 50%;
         margin-inline: auto;
-        font-size: 13px;
+        font-size: clamp(1rem, 0.943rem + 0.268vw, 1.2rem);
         border: 2px solid a.$black;
+
+        @include a.min-widths(small) {
+            max-width: 12rem;
+        }
 
         &--top {
             display: none;
+            @include a.min-widths(medium) {
+                display: inline-block;
+                justify-content: flex-start;
+                margin: 0;
+            }
+        }
+
+        &--bottom {
+            @include a.min-widths(medium) {
+                display: none;
+            }
         }
     }
 
     &__list {
+        display: block;
         position: relative;
         margin-block-end: .8rem;
+        color: a.$white;
+        @include a.min-widths(medium) {
+            margin: 0;
+        }
+
+        &-img--mobile {
+            @include a.min-widths(medium) {
+                display: none;
+            }
+        }
 
         &-img--desktop {
             display: none;
+            @include a.min-widths(medium) {
+                display: inline;
+            }
         }
 
         &-title {
@@ -73,11 +146,22 @@
             font-family: a.$font-primary;
             text-transform: uppercase;
             font-weight: 300;
-            font-size: 24px;
-            color: a.$white;
+            font-size: clamp(1.6rem, 1.524rem + 0.357vw, 1.867rem);
             position: absolute;
             bottom: 1rem;
             left: .8rem;
+            z-index: 2;
         }
+    }
+
+    &__list::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: a.$white;
+        opacity: 0;
     }
 }
